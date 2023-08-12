@@ -1,7 +1,7 @@
 <template>
-  <v-app>
+  <v-app style="overflow-y: hidden;overflow-x: hidden;">
      <AppHeader/>
-     <v-container style="margin-left:201px;margin-top:65px;width:85%; height:88%; position: absolute;">
+     <v-container style="margin-left:201px;margin-top:65px;width:calc(100% - 100px); height:calc(100% - 64px); position: absolute;overflow-y: auto;">
         <router-view/>
      </v-container>
   </v-app>

@@ -1,16 +1,16 @@
 <template>
     <v-container>
         <v-row no-gutters>
-            <v-col cols="8" class="align-start">
+            <v-col cols="7" class="align-start">
                 <v-row>
-                    <v-col cols="8" class="align-start mr-5">
+                    <v-col cols="7" class="text-start mr-5">
                         <v-row class="ml-2">
                             <v-text class="text-h6">Monthly Budget</v-text>
-                            <v-icon dark>mdi-chevron-down</v-icon>
+                            <v-icon dark class="mt-1 ml-1">mdi-chevron-down</v-icon>
                         </v-row>
                         <v-row class="mb-2">
                             <v-card width="95" height="25" class="ml-5" style="background-color: #E6F5EA;">
-                                <v-text class="text-caption ml-1" style="color:#53BD71">April, 2022</v-text>
+                                <v-text class="text-caption ml-1" style="color:#53BD71">April 2022</v-text>
                                 <v-icon dark color="#53BD71" class="mb-1">mdi-menu-down</v-icon>
                             </v-card>
                         </v-row>
@@ -26,12 +26,12 @@
                 </v-row>
                 <v-sheet class="pa-2">
                     <v-row>
-                        <v-col sm="6" class="mb-2 ml-1">
+                        <v-col sm="6" class="mb-5 ml-1">
                             <v-text class="text-subtitle-1 font-weight-medium">Categories</v-text>
                         </v-col>
                     </v-row>
                     <v-card flat v-for="item in progressMenu" :key="name" class="mb-4">
-                        <v-row >
+                        <v-row>
                             <v-col cols="9">
                                 <v-btn style="display: inline-block;" size="x-small" :color="item.color" :icon="item.icon">
                                     <v-icon size="small" color="white">{{ item.icon }}</v-icon>
@@ -40,81 +40,99 @@
                                     class="text-center pa-0 ml-2 text-subtitle-1 font-weight-medium">
                                     <span>{{ item.name }}</span>
                                 </v-card-text>
-                                <v-card-text class="text-caption pa-0 ml-5 mb-2"
+                                <v-card-text class="text-caption pa-0 ml-5 mb-2 font-weight-medium"
                                     style="color: #707070;margin-left: 9% !important;">
-                                    Spent <span style="color: #53BD71;">${{ item.spent }}</span> of ${{ item.limit }}
+                                    spent <span style="color: #53BD71;">${{ item.spent }}</span> of ${{ item.limit }}
                                 </v-card-text>
 
-                                <v-progress-linear :model-value="progressValue(item.spent, item.limit)"
+                                <v-progress-linear height="5" :model-value="progressValue(item.spent, item.limit)"
                                     :color="item.color"></v-progress-linear>
                             </v-col>
-                            <v-col cols="3">
-                                <v-text class="text-subtitle-1 pa-3" style="color: #707070;">
+                            <v-col cols="3" class="pa-0 mt-5">
+                                <v-text class="text-subtitle-1" style="color: #707070;">
                                     <span style="color: #53BD71;">
                                         ${{ item.limit - item.spent }}
                                     </span>
-                                    <br /><span class="ml-4">left</span></v-text>
+                                    <br />
+                                    <span class="text-caption text-right">left</span>
+                                </v-text>
                             </v-col>
                         </v-row>
                     </v-card>
                 </v-sheet>
             </v-col>
-            <v-col cols="4" order="7" class="align-end">
-                <v-card width="300" height="100">
-                    <v-row style="color: #707070;">
-                        <v-col cols="4" class="text-center mt-2 text-subtitle-1 pa-2">
-                            <v-text>Spent</v-text><br />
-                            <v-text style="color: #FE5C5C;">$800</v-text>
-                        </v-col>
-                        <v-col cols="4" class="text-center mt-2 text-subtitle-1 pa-2">
-                            <v-text>Available</v-text><br />
-                            <v-text style="color: #53BD71;">$1200</v-text>
-                        </v-col>
-                        <v-col cols="4" class="text-center mt-2 text-subtitle-1 pa-2">
-                            <v-text>Budget</v-text><br />
-                            <v-text>$2000</v-text>
-                        </v-col>
-                    </v-row>
-                    <v-row class="ma-3">
-                        <v-progress-linear height="20" rounded :model-value="progressValue(800, 2000)"
-                            color="#5157BF"></v-progress-linear>
-                    </v-row>
+            <v-col cols="5" class="align-end">
+                <v-row>
+                    <v-col cols="10">
+                        <Statistics></Statistics>
+                    </v-col>
+                </v-row>
 
-                </v-card>
-                <v-sheet class="pa-2 ma-2">
-                    <v-card width="300" height="200" style="background-color: #53BD71;">
 
-                    </v-card>
-                    <v-card></v-card>
-                    <v-card></v-card>
-                </v-sheet>
+                <v-row class="mt-2">
+                    <v-col cols="12" class="mb-1">
+                        <v-text class="text-center">6 Months Snapshot</v-text>
+                    </v-col>
+                </v-row>
+                <v-row>
+                    <v-col cols="10">
+                        <v-card height="200">
+
+                            <v-row>
+
+                            </v-row>
+                        </v-card>
+                    </v-col>
+                </v-row>
+
+                <v-row>
+                    <v-col cols="12" class="mb-1">
+                        <v-text class="text-center">Recent Transactions</v-text>
+                    </v-col>
+                    <v-col cols="10">
+                        <v-card height="300">
+
+                            <v-row>
+
+                            </v-row>
+                        </v-card>
+                    </v-col>
+                </v-row>
+
+                <v-row>
+                    <v-col cols="12" class="mb-1">
+                        <v-text class="text-center">Bank & Credit Cards</v-text>
+                    </v-col>
+                    <v-col cols="10">
+                        <v-card height="100">
+
+                            <v-row>
+
+                            </v-row>
+                        </v-card>
+                    </v-col>
+                </v-row>
+
+                <v-row>
+                    <v-col cols="12" class="mb-1">
+                        <v-text class="text-center">Saving Goals</v-text>
+                    </v-col>
+                    <v-col cols="10">
+                        <v-card height="200">
+
+                            <v-row>
+
+                            </v-row>
+                        </v-card>
+                    </v-col>
+                </v-row>
+
             </v-col>
         </v-row>
     </v-container>
-
-    <!-- <v-col sm="7" class="align-start" v-for="item in progressMenu" :key="name">
-            <v-card flat>
-                <v-btn style="display: inline-block;" size="x-small" :color="item.color" :icon="item.icon">
-                    <v-icon size="small" color="white">{{ item.icon }}</v-icon>
-                </v-btn>
-                <v-card-title style="display: inline-block;"
-                    class="text-center pa-0 ml-2 text-subtitle-1 font-weight-medium">
-                    {{ item.name }}
-                </v-card-title>
-                <v-card-text class="text-caption pa-0 ml-5" style="color: #707070;">
-                    Spent <span style="color: #53BD71;">${{ item.spent }}</span> of ${{ item.limit }}
-                </v-card-text>
-            </v-card>
-            <v-progress-linear model-value="20" :color="item.color"></v-progress-linear>
-        </v-col>
-        <v-col sm="5" class="align-end">
-            <v-card width="300" style="background-color: #53BD71;">
-                AAAAAA</v-card>
-            <v-card></v-card>
-            <v-card></v-card>
-        </v-col> -->
 </template>
 <script>
+import Statistics from './Statistics.vue';
 export default {
     data: () => ({
         progressMenu:
@@ -134,6 +152,9 @@ export default {
             { name: "Utilities", icon: "mdi-", color: "#009EDF", spent: 160, limit: 300 }],
         align: true
     }),
+    components: {
+        Statistics,
+    },
     methods: {
         progressValue(spent, limit) {
             return spent / limit * 100;
