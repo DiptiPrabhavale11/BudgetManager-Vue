@@ -76,11 +76,8 @@
                 </v-row>
                 <v-row>
                     <v-col cols="10">
-                        <v-card height="200">
-
-                            <v-row>
-
-                            </v-row>
+                        <v-card height="250">
+                            <BarChart></BarChart>
                         </v-card>
                     </v-col>
                 </v-row>
@@ -133,6 +130,7 @@
 </template>
 <script>
 import Statistics from './Statistics.vue';
+import BarChart from './BarChart.vue';
 export default {
     data: () => ({
         progressMenu:
@@ -154,6 +152,7 @@ export default {
     }),
     components: {
         Statistics,
+        BarChart
     },
     methods: {
         progressValue(spent, limit) {
