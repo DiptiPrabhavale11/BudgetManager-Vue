@@ -1,5 +1,5 @@
 <template>
-  <AppHeader/>
+  <!-- <AppHeader/> -->I am Home
 </template>
 
 <script>
