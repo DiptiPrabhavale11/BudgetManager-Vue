@@ -71,7 +71,7 @@
 
                 <v-row class="mt-2">
                     <v-col cols="12" class="mb-1">
-                        <v-text class="text-center">6 Months Snapshot</v-text>
+                        <v-text class="text-center font-weight-medium">6 Months Snapshot</v-text>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -83,22 +83,46 @@
                 </v-row>
 
                 <v-row>
-                    <v-col cols="12" class="mb-1">
-                        <v-text class="text-center">Recent Transactions</v-text>
+                    <v-col cols="12" class="mt-1 ml-2 pa-0">
+                        <v-text class="text-center font-weight-medium">Recent Transactions</v-text>
                     </v-col>
                     <v-col cols="10">
-                        <v-card height="300">
+                        <v-card flat class="mt-3" v-for="record in transactions" :key="name" rounded height="70"
+                            style="border: solid 1px #DDDDDD;">
+                            <v-avatar style="display: inline-block;" class="pa-0 ml-2 mb-5">
+                                <v-img :src="record.icon"></v-img>
+                            </v-avatar>
 
-                            <v-row>
+                            <v-card-text style="display: inline-block;"
+                                class="text-center pa-0 ml-3 mt-2 text-subtitle-1 font-weight-medium">
+                                {{ record.name }}
+                                <span class="text-caption font-weight-medium text-left"
+                                    style="display: block;color: #707070;">
+                                    {{ record.category }}
+                                </span>
+                            </v-card-text>
 
-                            </v-row>
+                            <span style="display:inline-block; float:right;" class="mt-4 mr-3">
+                                <v-icon dark class="mt-1 ml-1">mdi-chevron-right</v-icon>
+                            </span>
+
+                            <v-card-text style="display: inline-block;float:right;"
+                                class="align-end text-right pa-0 mr-5 mt-3 text-subtitle-1 font-weight-medium">
+                                ${{ record.amount }}
+                                <span class="text-caption font-weight-medium text-left"
+                                    style="display: block;color: #707070;">
+                                    {{ record.date }}
+                                </span>
+                            </v-card-text>
+                            
                         </v-card>
+
                     </v-col>
                 </v-row>
 
                 <v-row>
                     <v-col cols="12" class="mb-1">
-                        <v-text class="text-center">Bank & Credit Cards</v-text>
+                        <v-text class="text-center font-weight-medium">Bank & Credit Cards</v-text>
                     </v-col>
                     <v-col cols="10">
                         <v-card height="100">
@@ -112,7 +136,7 @@
 
                 <v-row>
                     <v-col cols="12" class="mb-1">
-                        <v-text class="text-center">Saving Goals</v-text>
+                        <v-text class="text-center font-weight-medium">Saving Goals</v-text>
                     </v-col>
                     <v-col cols="10">
                         <v-card height="200">
@@ -148,6 +172,10 @@ export default {
             { name: "Transportation", icon: "mdi-", color: "#FFB900", spent: 30, limit: 100 },
             { name: "Travel", icon: "mdi-", color: "#8E7CC3", spent: 0, limit: 100 },
             { name: "Utilities", icon: "mdi-", color: "#009EDF", spent: 160, limit: 300 }],
+        transactions: [{ name: "Cold Brew", icon: "./Food.png", category: "food", amount:5.92, date:"03-30-2022" },
+        { name: "Coursera", icon: "./education.png", category: "education", amount:39.00, date:"03-12-2022" },
+        { name: "Apple Tree", icon: "./groceries.png", category: "groceries", amount:3.68, date:"03-03-2022" },
+        { name: "BKST-U-PENN", icon: "./shopping.png", category: "shopping", amount:39.89, date:"03-10-2022" }],
         align: true
     }),
     components: {
