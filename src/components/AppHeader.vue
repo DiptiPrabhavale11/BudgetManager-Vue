@@ -1,11 +1,12 @@
 <template>
     <v-card class="mx-auto overflow-hidden">
         <v-app-bar dark>
-            <v-flex width="100" class="ml-2" style="background-color: blueviolet;border-radius: 15%;">
-                <v-icon color="white">mdi-currency-usd</v-icon>
+            <v-flex width="100" class="ml-2">
+                <v-img width="40" height="40" src="../../public/logo.png"></v-img>
             </v-flex>
+            
             <v-text class="ml-2 text-h5 pa-2" append-icon="mdi-school-outline"
-                style="color: blueviolet;">Budgetwise</v-text>
+                style="color: #5157BF;">Budgetwise</v-text>
             <v-row class="ml-5">
                 <v-tabs :align-with-title="align" style="color: #707070;">
                     <v-tab>Home</v-tab>
