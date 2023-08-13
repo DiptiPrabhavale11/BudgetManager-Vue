@@ -33,31 +33,38 @@
      
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/4def6bcf-d1e2-48a1-81a0-8a8cde3e8c4f)
 
-
   *  <b>[Recent Transactions](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/TransactionDetails.vue)</b>
-
+ 
+      This component is responsible for maintaining the details of recent transactions. It indicates the recent transaction, it's category, the amount spent, and the date of the transaction.
+     
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/be0b89ef-f7ac-4c53-b5ef-5c5603fd13cd)
-
 
   *  <b>[Bank & Credit Cards](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/BankAndCardDetails.vue)</b>
 
+      This component shows the current bank balance per card.
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/e611c22f-ffd5-43d9-8457-b485d27f7c13)
 
   *  <b>[Saving Goals](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/SavingGoals.vue)</b>
-
+ 
+      If a user has set any saving goals then this component tracks the progress for it. It renders the completion percentage through a  circular progress bar. It shows the details of total savings by the particular date.
+     
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/3f31095d-765c-4bd5-964f-518aa0b86060)
 
   *  <b>[Budget Dialog](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/BudgetUpdateDialog.vue)</b>
-
+ 
+      This dialog gives a provision to update the expense per category. Once the amount and category are updated, it auto-calculates the remaining amount along with the updation of the spent amount for that category. Additionally, it updates the overall budget also.
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/a52030bc-e472-4c7d-8fdd-2de03bf70874)
 
 
   *  <b>[Negative Budget Handling](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/Statistics.vue)</b>
-
+ 
+      If the user updates the amount for any category that is bigger than the overall budget then after the successful update it reflects negative amounts across that category and the overall budget statistics tile. It will render these amounts in red color to alert the user.
+     
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/e4d6d2cd-d02c-44d5-a2f6-65e4fdc75869)
 
   *  <b>[Routing](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/router/index.js)</b>
-
+ 
+      The application header provides two different links for COmmunity and FAQs. It will load the respective components depending on the user selection.
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/dde40afb-6a20-4757-9a4e-e1a178f2ca33)
 
 
