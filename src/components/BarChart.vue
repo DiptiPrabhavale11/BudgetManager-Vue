@@ -70,7 +70,7 @@ export default {
 </script> -->
 
 <template>
-  <Bar :data="datasets" :options="options" />
+  <Bar class="ma-4" :data="datasets" :options="options" />
 </template>
 
 <script>
@@ -98,37 +98,37 @@ export default {
         datasets: [
           {
             label: 'Utilities',
-            data: [44, 55, 41, 37, 22, 43, 21],
+            data: [55, 35, 42, 57, 49, 32],
             backgroundColor: "#009EDF",
             stack: 'Stack 0',
           },
           {
             label: 'Housing',
-            data: [12, 17, 11, 9, 15, 11, 20],
+            data: [12, 17, 11, 9, 15, 11],
             backgroundColor: "#FF373C",
             stack: 'Stack 0',
           },
           {
             label: 'Entertainment',
-            data: [9, 7, 5, 8, 6, 9, 4],
+            data: [9, 7, 13, 14, 6, 9],
             backgroundColor: '#FF8301',
             stack: 'Stack 0',
           },
           {
             label: 'Transportation',
-            data: [9, 7, 5, 8, 6, 9, 4],
+            data: [9, 7, 5, 8, 6, 9],
             backgroundColor: '#FFB900',
             stack: 'Stack 0',
           },
           {
             label: 'Food',
-            data: [5, 7, 9, 11, 8, 4, 3],
+            data: [7, 9, 4, 8, 6, 3],
             backgroundColor: '#213B80',
             stack: 'Stack 0',
           },
           {
             label: 'Other',
-            data: [19, 17, 15, 18, 16, 19, 14],
+            data: [14, 17, 15, 18, 16, 19, 5],
             backgroundColor: '#984F88',
             stack: 'Stack 0',
           },
@@ -136,18 +136,6 @@ export default {
       },
       options: {
         plugins: {
-          scales: {
-            x: {
-              gridlines: {
-                display: false
-              }
-            },
-            y: {
-              gridlines: {
-                display: false
-              }
-            }
-          },
           legend: {
             display: true,
             position: "bottom",
@@ -162,6 +150,19 @@ export default {
             }
           }
         },
+        scales: {
+            x: {
+              gridlines: {
+                color: '#00000',
+                display: true
+              }
+            },
+            y: {
+              gridlines: {
+                display: false
+              }
+            }
+          },
         responsive: true,
         maintainAspectRatio: false,
         barThickness: 20,

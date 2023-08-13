@@ -26,7 +26,7 @@
             </v-card-text>
             <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn flat color="#5157BF" @click="dialog = false">
+                <v-btn flat color="#5157BF" @click="cancel">
                     Close
                 </v-btn>
                 <v-btn flat color="#5157BF" @click="saveBudget">
@@ -44,9 +44,9 @@ export default {
         amount: "",
         errorFlag: false,
     }),
-    mounted() {
-        this.category = this.$store.getters.getCategories[0];
-    },
+    // created() {
+    //     this.category = this.categories[0];
+    // },
     computed: {
         categories() {
             return this.$store.getters.getCategories;
@@ -58,9 +58,14 @@ export default {
             console.log(this.category, this.amount);
             // this.errorFlag = true;
             this.$store.dispatch("updateCategories", { name: this.category, spent: Number(this.amount) });
-            this.dialog = false;
-            this.category = this.$store.getters.getCategories[0];
+            this.category = null;
             this.amount = "";
+            this.dialog = false;
+        },
+        cancel(){
+            this.category = null;
+            this.amount = "";
+            this.dialog = false;
         }
     }
 }

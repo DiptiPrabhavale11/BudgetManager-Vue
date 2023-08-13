@@ -6,7 +6,7 @@
         <v-col cols="1">
             <v-icon>mdi-plus</v-icon>
         </v-col>
-        <v-col cols="10">
+        <v-col cols="10" class="pa-0 ml-3">
             <v-card height="220">
                 <v-row>
                     <v-col cols="7" class="ma-3">
@@ -21,8 +21,8 @@
                     <v-col cols="4">
                         <v-progress-circular :rotate="360" :size="120" :width="25" model-value="50" color="#53BD71">
                             <span>$300</span>
-                            <br />
-                            <!-- <div style="color: #707070;display: block" class="text-caption">text inside</div> -->
+                            <!-- <br />&nbsp;&nbsp;
+                            <div style="color: #707070;display: block" class="text-caption">text inside</div> -->
                         </v-progress-circular>
                     </v-col>
                     <v-col cols="8" class="mt-5">

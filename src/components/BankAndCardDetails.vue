@@ -41,7 +41,7 @@ export default {
                 name: "Bank of America", 
                 icon: "./bofa.png", 
                 category: "...4765", 
-                amount: 1326.23, 
+                amount: "1,326.23", 
                 date: "Balance" 
             },
         ],

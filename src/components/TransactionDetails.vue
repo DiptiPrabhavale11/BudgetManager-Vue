@@ -1,12 +1,12 @@
 <template>
-    <v-row>
-        <v-col cols="8" class="mt-3 ml-3 pa-1">
+    <v-row class="mb-4">
+        <v-col cols="8" class="mt-3 ml-3 pa-0">
             <v-text class="text-center font-weight-medium">Recent Transactions</v-text>
         </v-col>
         <v-col cols="2" class="mt-1">
             <v-text class="text-center text-subtitle-2 font-weight-regular">See all</v-text>
         </v-col>
-        <v-col cols="10">
+        <v-col cols="10" class="pa-0 ml-3">
             <v-card flat class="mt-1" v-for="record in transactions" :key="name" rounded height="70"
                 style="border: solid 1px #DDDDDD;">
                 <v-avatar style="display: inline-block;" class="pa-0 ml-2 mb-5">

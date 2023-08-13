@@ -55,7 +55,7 @@
                                         ${{ item.limit - item.spent }}
                                     </span>
                                     <span v-if="item.limit < item.spent" class="lowBudget">
-                                        - ${{ (item.limit - item.spent)*-1 }}
+                                        - ${{ (item.limit - item.spent) * -1 }}
                                     </span>
                                     <br />
                                     <span class="text-caption text-right">left</span>
@@ -73,22 +73,20 @@
                 </v-row>
 
                 <v-row class="mt-3">
-                    <v-col cols="12" class="mb-1">
+                    <v-col cols="12" class="mb-1 ml-2 mt-4 pa-0">
                         <v-text class="text-center font-weight-medium">6 Month Snapshot</v-text>
                     </v-col>
                 </v-row>
-                <v-row>
+                <v-row class="mb-2">
                     <v-col cols="10">
-                        <v-card height="250">
+                        <v-card height="270" class="pa-0">
                             <BarChart></BarChart>
                         </v-card>
                     </v-col>
                 </v-row>
-
                 <TransactionDetails></TransactionDetails>
                 <BankAndCardDetails></BankAndCardDetails>
                 <SavingGoals></SavingGoals>
-
             </v-col>
         </v-row>
     </v-container>
@@ -104,25 +102,25 @@ import BudgetUpdateDialog from './BudgetUpdateDialog.vue';
 
 export default {
     data: () => ({
-        progressMenu:
-            [{ name: "Education", icon: "mdi-school-outline", color: "#46BDC6", spent: 40, limit: 100 },
-            { name: "Entertainment", icon: "mdi-drama-masks", color: "#FF8301", spent: 10, limit: 50 },
-            { name: "Food", icon: "mdi-food-fork-drink", color: "#213B80", spent: 68, limit: 150 },
-            { name: "Groceries", icon: "mdi-bread-slice-outline", color: "#00BC38", spent: 100, limit: 200 },
-            { name: "Healthcare", icon: "mdi-healthcare", color: "#AD3B9B", spent: 100, limit: 100 },
-            { name: "Housing", icon: "mdi-home-city", color: "#FF373C", spent: 1750, limit: 1750 },
-            { name: "Miscellaneous", icon: "mdi-shape", color: "#B0866D", spent: 0, limit: 50 },
-            { name: "Office", icon: "mdi-", color: "#E4759D", spent: 0, limit: 20 },
-            { name: "Pets", icon: "mdi", color: "#783F05", spent: 0, limit: 100 },
-            { name: "Shopping", icon: "mdi-", color: "#386BBC", spent: 20, limit: 100 },
-            { name: "Subscriptions", icon: "mdi-", color: "#4F7F88", spent: 35, limit: 50 },
-            { name: "Transportation", icon: "mdi-", color: "#FFB900", spent: 30, limit: 100 },
-            { name: "Travel", icon: "mdi-", color: "#8E7CC3", spent: 0, limit: 100 },
-            { name: "Utilities", icon: "mdi-", color: "#009EDF", spent: 160, limit: 300 }],
-        transactions: [{ name: "Cold Brew", icon: "./Food.png", category: "food", amount: 5.92, date: "03-30-2022" },
-        { name: "Coursera", icon: "./education.png", category: "education", amount: 39.00, date: "03-12-2022" },
-        { name: "Apple Tree", icon: "./groceries.png", category: "groceries", amount: 3.68, date: "03-03-2022" },
-        { name: "BKST-U-PENN", icon: "./shopping.png", category: "shopping", amount: 39.89, date: "03-10-2022" }],
+        // progressMenu:
+        //     [{ name: "Education", icon: "mdi-school-outline", color: "#46BDC6", spent: 40, limit: 100 },
+        //     { name: "Entertainment", icon: "mdi-drama-masks", color: "#FF8301", spent: 10, limit: 50 },
+        //     { name: "Food", icon: "mdi-food-fork-drink", color: "#213B80", spent: 68, limit: 150 },
+        //     { name: "Groceries", icon: "mdi-bread-slice-outline", color: "#00BC38", spent: 100, limit: 200 },
+        //     { name: "Healthcare", icon: "mdi-healthcare", color: "#AD3B9B", spent: 100, limit: 100 },
+        //     { name: "Housing", icon: "mdi-home-city", color: "#FF373C", spent: 1750, limit: 1750 },
+        //     { name: "Miscellaneous", icon: "mdi-shape", color: "#B0866D", spent: 0, limit: 50 },
+        //     { name: "Office", icon: "mdi-", color: "#E4759D", spent: 0, limit: 20 },
+        //     { name: "Pets", icon: "mdi", color: "#783F05", spent: 0, limit: 100 },
+        //     { name: "Shopping", icon: "mdi-", color: "#386BBC", spent: 20, limit: 100 },
+        //     { name: "Subscriptions", icon: "mdi-", color: "#4F7F88", spent: 35, limit: 50 },
+        //     { name: "Transportation", icon: "mdi-", color: "#FFB900", spent: 30, limit: 100 },
+        //     { name: "Travel", icon: "mdi-", color: "#8E7CC3", spent: 0, limit: 100 },
+        //     { name: "Utilities", icon: "mdi-", color: "#009EDF", spent: 160, limit: 300 }],
+        // transactions: [{ name: "Cold Brew", icon: "./Food.png", category: "food", amount: 5.92, date: "03-30-2022" },
+        // { name: "Coursera", icon: "./education.png", category: "education", amount: 39.00, date: "03-12-2022" },
+        // { name: "Apple Tree", icon: "./groceries.png", category: "groceries", amount: 3.68, date: "03-03-2022" },
+        // { name: "BKST-U-PENN", icon: "./shopping.png", category: "shopping", amount: 39.89, date: "03-10-2022" }],
         align: true
     }),
     components: {
@@ -134,16 +132,16 @@ export default {
         SavingGoals,
         BudgetUpdateDialog
     },
-    mounted(){
-        this.$store.dispatch("fetchCategories").then((data)=>{
+    mounted() {
+        this.$store.dispatch("fetchCategories").then((data) => {
             console.log("fetched", data)
         });
     },
-    computed:{
-       categories(){
-        console.log("fetchCategories", this.$store.getters.getCategories)
-        return this.$store.getters.getCategories;
-       } 
+    computed: {
+        categories() {
+            console.log("fetchCategories", this.$store.getters.getCategories)
+            return this.$store.getters.getCategories;
+        }
     },
     methods: {
         progressValue(spent, limit) {
