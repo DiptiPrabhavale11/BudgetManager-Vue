@@ -1,0 +1,102 @@
+{
+  "categories": [
+    {
+      "name": "Education",
+      "icon": "mdi-school-outline",
+      "color": "#46BDC6",
+      "spent": 40,
+      "limit": 100
+    },
+    {
+      "name": "Entertainment",
+      "icon": "mdi-drama-masks",
+      "color": "#FF8301",
+      "spent": 10,
+      "limit": 50
+    },
+    {
+      "name": "Food",
+      "icon": "mdi-food-fork-drink",
+      "color": "#213B80",
+      "spent": 68,
+      "limit": 150
+    },
+    {
+      "name": "Groceries",
+      "icon": "mdi-bread-slice-outline",
+      "color": "#00BC38",
+      "spent": 100,
+      "limit": 200
+    },
+    {
+      "name": "Healthcare",
+      "icon": "mdi-healthcare",
+      "color": "#AD3B9B",
+      "spent": 100,
+      "limit": 100
+    },
+    {
+      "name": "Housing",
+      "icon": "mdi-home-city",
+      "color": "#FF373C",
+      "spent": 1750,
+      "limit": 1750
+    },
+    {
+      "name": "Miscellaneous",
+      "icon": "mdi-shape",
+      "color": "#B0866D",
+      "spent": 0,
+      "limit": 50
+    },
+    {
+      "name": "Office",
+      "icon": "mdi-",
+      "color": "#E4759D",
+      "spent": 0,
+      "limit": 20
+    },
+    {
+      "name": "Pets",
+      "icon": "mdi",
+      "color": "#783F05",
+      "spent": 0,
+      "limit": 100
+    },
+    {
+      "name": "Shopping",
+      "icon": "mdi-",
+      "color": "#386BBC",
+      "spent": 20,
+      "limit": 100
+    },
+    {
+      "name": "Subscriptions",
+      "icon": "mdi-",
+      "color": "#4F7F88",
+      "spent": 35,
+      "limit": 50
+    },
+    {
+      "name": "Transportation",
+      "icon": "mdi-",
+      "color": "#FFB900",
+      "spent": 30,
+      "limit": 100
+    },
+    {
+      "name": "Travel",
+      "icon": "mdi-",
+      "color": "#8E7CC3",
+      "spent": 0,
+      "limit": 100
+    },
+    {
+      "name": "Utilities",
+      "icon": "mdi-",
+      "color": "#009EDF",
+      "spent": 160,
+      "limit": 300
+    }
+  ]
+}

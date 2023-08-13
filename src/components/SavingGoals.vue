@@ -1,6 +1,6 @@
 <template>
     <v-row>
-        <v-col cols="9" class="pa-3 mt-1 mb-1">
+        <v-col cols="9" class="pa-3 mt-1 mb-1 ml-1">
             <v-text class="text-center font-weight-medium">Saving Goals</v-text>
         </v-col>
         <v-col cols="1">

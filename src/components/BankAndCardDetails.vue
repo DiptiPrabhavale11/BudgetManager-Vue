@@ -1,6 +1,6 @@
 <template>
     <v-row>
-        <v-col cols="12" class="mt-1 ml-2 pa-0">
+        <v-col cols="12" class="mt-1 ml-4 pa-0">
             <v-text class="text-center font-weight-medium">Bank & Credi Cards </v-text>
         </v-col>
         <v-col cols="10">

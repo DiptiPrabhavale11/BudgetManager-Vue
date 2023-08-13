@@ -28,9 +28,17 @@
 <script>
 export default {
     data: () => ({
-        budget: 2000,
-        spent: 800
+        // budget: 2000,
+        // spent: 800
     }),
+    computed:{
+        spent(){
+            return this.$store.getters.getSpent;
+        },
+        budget(){
+            return this.$store.getters.getBudget;
+        }
+    },
     methods: {
         progressValue(spent, limit) {
             return spent / limit * 100;

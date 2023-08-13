@@ -1,7 +1,10 @@
 <template>
     <v-row>
-        <v-col cols="12" class="mt-3 ml-3 pa-1">
+        <v-col cols="8" class="mt-3 ml-3 pa-1">
             <v-text class="text-center font-weight-medium">Recent Transactions</v-text>
+        </v-col>
+        <v-col cols="2" class="mt-1">
+            <v-text class="text-center text-subtitle-2 font-weight-regular">See all</v-text>
         </v-col>
         <v-col cols="10">
             <v-card flat class="mt-1" v-for="record in transactions" :key="name" rounded height="70"
@@ -39,10 +42,10 @@
 export default {
     data: () => ({
         transactions: [
-            { name: "Cold Brew", icon: "./Food.png", category: "food", amount: 5.92, date: "03-30-2022" },
-            { name: "Coursera", icon: "./education.png", category: "education", amount: 39.00, date: "03-12-2022" },
-            { name: "Apple Tree", icon: "./groceries.png", category: "groceries", amount: 3.68, date: "03-03-2022" },
-            { name: "BKST-U-PENN", icon: "./shopping.png", category: "shopping", amount: 39.89, date: "03-10-2022" }
+            { name: "Cold Brew", icon: "./Food.png", category: "Starbucks", amount: 5.92, date: "03-30-2022" },
+            { name: "Coursera", icon: "./education.png", category: "Education", amount: "39.00", date: "03-12-2022" },
+            { name: "AppleTree", icon: "./groceries.png", category: "Groceries", amount: 3.98, date: "03-03-2022" },
+            { name: "BKST-U-PENN", icon: "./shopping.png", category: "Shopping", amount: 49.89, date: "03-10-2022" }
         ],
     })
 }

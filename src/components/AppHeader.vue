@@ -16,10 +16,10 @@
             </v-row>
 
             <v-spacer></v-spacer>
-            <v-avatar class="mr-4" image="DiptiPrabhavale.jpeg">
+            <v-avatar size="small" class="mr-3" image="DiptiPrabhavale.jpeg">
             </v-avatar>
-            <v-text class="mr-2">Dipti Prabhavale</v-text>
-            <v-icon class="mr-2" dark>mdi-chevron-down</v-icon>
+            <v-text class="mr-5">Dipti Prabhavale</v-text>
+            <v-icon class="mr-5" dark>mdi-chevron-down</v-icon>
         </v-app-bar>
 
         <v-navigation-drawer permanent location="left" width="200">

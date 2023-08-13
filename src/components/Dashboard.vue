@@ -19,9 +19,10 @@
                     <v-col class="mr-5">
                         <v-icon size="small" class="mt-2 mr-1">mdi-share-variant-outline</v-icon>
                         <v-icon size="small" class="mt-2 mr-1">mdi-dots-vertical</v-icon>
-                        <v-btn class="mt-2" size="x-small" color="#5157BF" icon="mdi-plus">
+                        <!-- <v-btn class="mt-2" size="x-small" color="#5157BF" icon="mdi-plus">
                             <v-icon size="small" color="white">mdi-plus</v-icon>
-                        </v-btn>
+                        </v-btn> -->
+                        <BudgetUpdateDialog class="pa-0"></BudgetUpdateDialog>
                     </v-col>
                 </v-row>
                 <v-sheet class="pa-2">
@@ -30,7 +31,7 @@
                             <v-text class="text-subtitle-1 font-weight-medium">Categories</v-text>
                         </v-col>
                     </v-row>
-                    <v-card flat v-for="item in progressMenu" :key="name" class="mb-4">
+                    <v-card v-if="categories.length" flat v-for="item in categories" :key="name" class="mb-4">
                         <v-row>
                             <v-col cols="9">
                                 <v-btn style="display: inline-block;" size="x-small" :color="item.color" :icon="item.icon">
@@ -68,9 +69,9 @@
                     </v-col>
                 </v-row>
 
-                <v-row class="mt-2">
+                <v-row class="mt-3">
                     <v-col cols="12" class="mb-1">
-                        <v-text class="text-center font-weight-medium">6 Months Snapshot</v-text>
+                        <v-text class="text-center font-weight-medium">6 Month Snapshot</v-text>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -96,6 +97,8 @@ import TransactionDetails from './TransactionDetails.vue';
 import BankAndCardDetails from './BankAndCardDetails.vue';
 import DonutChart from './DonutChart.vue';
 import SavingGoals from './SavingGoals.vue';
+import BudgetUpdateDialog from './BudgetUpdateDialog.vue';
+
 export default {
     data: () => ({
         progressMenu:
@@ -125,7 +128,19 @@ export default {
         TransactionDetails,
         BankAndCardDetails,
         DonutChart,
-        SavingGoals
+        SavingGoals,
+        BudgetUpdateDialog
+    },
+    mounted(){
+        this.$store.dispatch("fetchCategories").then((data)=>{
+            console.log("fetched", data)
+        });
+    },
+    computed:{
+       categories(){
+        console.log("fetchCategories", this.$store.getters.getCategories)
+        return this.$store.getters.getCategories;
+       } 
     },
     methods: {
         progressValue(spent, limit) {
