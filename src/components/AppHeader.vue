@@ -9,9 +9,9 @@
                 style="color: #5157BF;">Budgetwise</v-text>
             <v-row class="ml-5">
                 <v-tabs :align-with-title="align" style="color: #707070;">
-                    <v-tab>Home</v-tab>
-                    <v-tab>Community</v-tab>
-                    <v-tab>FAQ</v-tab>
+                    <v-tab  to="/">Home</v-tab>
+                    <v-tab to="/Community">Community</v-tab>
+                    <v-tab to="/FAQs">FAQs</v-tab>
                 </v-tabs>
             </v-row>
 
