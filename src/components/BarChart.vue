@@ -94,16 +94,16 @@ export default {
           'July',
           'August',
         ],
-        barThickness:10,
+        barThickness: 10,
         datasets: [
           {
-            label: 'Housing',
+            label: 'Utilities',
             data: [44, 55, 41, 37, 22, 43, 21],
             backgroundColor: "#009EDF",
             stack: 'Stack 0',
           },
           {
-            label: 'Utilities',
+            label: 'Housing',
             data: [12, 17, 11, 9, 15, 11, 20],
             backgroundColor: "#FF373C",
             stack: 'Stack 0',
@@ -122,7 +122,7 @@ export default {
           },
           {
             label: 'Food',
-            data: [29, 17, 35, 18, 26, 19, 14],
+            data: [5, 7, 9, 11, 8, 4, 3],
             backgroundColor: '#213B80',
             stack: 'Stack 0',
           },
@@ -135,9 +135,36 @@ export default {
         ],
       },
       options: {
+        plugins: {
+          scales: {
+            x: {
+              gridlines: {
+                display: false
+              }
+            },
+            y: {
+              gridlines: {
+                display: false
+              }
+            }
+          },
+          legend: {
+            display: true,
+            position: "bottom",
+            align: "center",
+            labels: {
+              usePointStyle: true,
+              pointStyle: "circle",
+              // pointStyleWidth: 7,
+              // pointStyleHeight: 7,
+              boxHeight: 5,
+              boxWidth: 5
+            }
+          }
+        },
         responsive: true,
         maintainAspectRatio: false,
-        barThickness:20,
+        barThickness: 20,
       },
     }
   }
