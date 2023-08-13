@@ -42,6 +42,7 @@
   *  <b>[Bank & Credit Cards](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/BankAndCardDetails.vue)</b>
 
       This component shows the current bank balance per card.
+     
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/e611c22f-ffd5-43d9-8457-b485d27f7c13)
 
   *  <b>[Saving Goals](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/SavingGoals.vue)</b>
