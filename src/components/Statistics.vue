@@ -11,7 +11,7 @@
             <v-col cols="4" class="text-center mt-2 text-subtitle-1 pa-2">
                 <v-card height="50" flat class="rounded-0 mt-1" style="border-right: solid 1px;color: #707070;">
                     <v-text>Available</v-text><br />
-                    <v-text style="color: #53BD71;">${{ budget - spent }}</v-text>
+                    <v-text :class="{ 'lowBudget': !inBudgetFlag, 'inBudget': inBudgetFlag }">{{ available }}</v-text>
                 </v-card>
             </v-col>
             <v-col cols="4" class="text-center mt-2 text-subtitle-1 pa-2">
@@ -31,12 +31,18 @@ export default {
         // budget: 2000,
         // spent: 800
     }),
-    computed:{
-        spent(){
+    computed: {
+        spent() {
             return this.$store.getters.getSpent;
         },
-        budget(){
+        budget() {
             return this.$store.getters.getBudget;
+        },
+        inBudgetFlag() {
+            return this.budget < this.spent ? false : true;
+        },
+        available() {
+            return !this.inBudgetFlag ? `- $ ${(this.budget - this.spent) * -1}` : `$ ${this.budget - this.spent}`;
         }
     },
     methods: {

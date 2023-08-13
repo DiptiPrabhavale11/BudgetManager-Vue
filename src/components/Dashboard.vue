@@ -51,8 +51,11 @@
                             </v-col>
                             <v-col cols="3" class="pa-0 mt-5">
                                 <v-text class="text-subtitle-1" style="color: #707070;">
-                                    <span style="color: #53BD71;">
+                                    <span v-if="item.limit >= item.spent" style="color: #53BD71;">
                                         ${{ item.limit - item.spent }}
+                                    </span>
+                                    <span v-if="item.limit < item.spent" class="lowBudget">
+                                        - ${{ (item.limit - item.spent)*-1 }}
                                     </span>
                                     <br />
                                     <span class="text-caption text-right">left</span>
