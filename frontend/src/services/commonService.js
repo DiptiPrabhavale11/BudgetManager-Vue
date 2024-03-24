@@ -1,6 +1,6 @@
 import axios from 'axios'
 const baseUrl = '/categories'
-// const baseUrl = "/api/categories"
+// const baseUrl = "http://localhost:5001/categories"
 const getAll = () => {
     const request = axios.get(baseUrl)
     return request.then(response => response.data)
