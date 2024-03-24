@@ -23,10 +23,10 @@ This Application is deployed using [Render](https://dashboard.render.com/) and c
 
 ## Project setup - How to download and run the project? ##
 
-    * <b> STEP 1:</b> Dowload or clone the repository using command ``` git clone https://github.com/DiptiPrabhavale11/BudgetManager-Vue.git ```
-    * <b> STEP 2:</b> Go to BudgetManager-Vue folder and run ``` npm install ``` .
-    * <b> STEP 3:</b> To start the local backend server run the command ``` npm run server ```. It will serve mock data from db.json 
-    * <b> STEP 4:</b> Execute ``` npm run serve ```. It will start the application at http://locahost:8080
+  - <b> STEP 1:</b> Dowload or clone the repository using command ``` git clone https://github.com/DiptiPrabhavale11/BudgetManager-Vue.git ```
+  - <b> STEP 2:</b> Go to BudgetManager-Vue folder and run ``` npm install ``` .
+  - <b> STEP 3:</b> To start the local backend server run the command ``` npm run server ```. It will serve mock data from db.json 
+  - <b> STEP 4:</b> Execute ``` npm run serve ```. It will start the application at http://locahost:8080
  
 ## Functionalities ##
   
