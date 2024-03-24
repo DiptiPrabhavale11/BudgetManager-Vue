@@ -1,10 +1,25 @@
-# Budget Management Application
+# [Budget Management Application](https://budgetmanager-vue.onrender.com/)
 
 * ## Technologies/libraries used ##
 
-  The front-end is developed using [Vue.js](https://vuejs.org/guide/introduction.html#what-is-vue), [Vuetify](https://vuetifyjs.com/en/components/all/), Javascript, HTML, and CSS. Apart from this main technological stack, I have used [chart.js](https://www.chartjs.org/docs/4.3.3/) and the supportive vue plugin [Vue-ChartJS](https://vue-chartjs.org/migration-guides/) for implementing charts. For rendering different icons, I have used [Material Design Icons](https://pictogrammers.com/library/mdi/)
+The front end is developed using 
+  - [Vue.js](https://vuejs.org/guide/introduction.html#what-is-vue)
+  - [Vuetify](https://vuetifyjs.com/en/components/all/)
+  -  Javascript
+  -  HTML
+  -  CSS.
+ 
+ Apart from this main technological stack, I have used [chart.js](https://www.chartjs.org/docs/4.3.3/) and the supportive vue plugin [Vue-ChartJS](https://vue-chartjs.org/migration-guides/) for implementing charts. For rendering different icons, I have used [Material Design Icons](https://pictogrammers.com/library/mdi/)
   
-  The Backend is mocked using json-server. This local server will fetch the data froma  mock data file named db.js
+The Backend is developed using 
+  - [Node](https://nodejs.org/en)
+  - [Express](https://expressjs.com/)
+  - [MongoDB](https://www.mongodb.com/)
+
+It will serve the required data for the front end. e.g categories.
+
+This Application is deployed using [Render](https://dashboard.render.com/) and can be accessed using this [URL](https://budgetmanager-vue.onrender.com/)
+
 
 * ## Project setup - How to download and run the project? ##
 
