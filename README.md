@@ -30,25 +30,25 @@ This Application is deployed using [Render](https://dashboard.render.com/) and c
  
 ## Functionalities ##
   
-  *  <b>[Home Page](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/Dashboard.vue)</b>
+  *  <b>[Home Page](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/frontend/src/components/Dashboard.vue)</b>
   
       The overall homepage comprises various components such as AppHeader, Statistics, Barchart, TransactionDetails, BankAndCreditCards, SavingGoal,s etc. Each component is responsible for its independent functionality. Vue store i.e [vuex](https://vuex.vuejs.org/) is used for sharing the common data between all of these components. Also, [Axios](https://www.npmjs.com/package/axios) is used to fetch data from the server.
      
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/a9511a0d-ecae-4206-822d-7d2d512561da)
 
-  *  <b>[Application Header](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/AppHeader.vue)</b>
+  *  <b>[Application Header](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/frontend/src/components/AppHeader.vue)</b>
  
       This is a separate component for navigating across different pages. It also contains left navigation bar with various other links to pages such as Transactions, Trends etc.
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/d0db9540-fe35-4270-a575-9684911a380e)
 
 
-  *  <b>[6 Month Snapshot](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/BarChart.vue)</b>
+  *  <b>[6 Month Snapshot](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/frontend/src/components/BarChart.vue)</b>
   
       This is a separate component responsible for rendering a stacked bar chart. The main purpose of this component is to showcase the trends in a user's spending per category over the last six months. It uses chart.js and vue-chartjs to render the chart. We can eliminate a few categories and compare the remaining categories just by clicking the legend labels.
      
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/4def6bcf-d1e2-48a1-81a0-8a8cde3e8c4f)
 
-  *  <b>[Recent Transactions](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/TransactionDetails.vue)</b>
+  *  <b>[Recent Transactions](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/frontend/src/components/TransactionDetails.vue)</b>
  
       This component is responsible for maintaining the details of recent transactions. It indicates the recent transaction, it's category, the amount spent, and the date of the transaction.
      
@@ -66,13 +66,13 @@ This Application is deployed using [Render](https://dashboard.render.com/) and c
      
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/3f31095d-765c-4bd5-964f-518aa0b86060)
 
-  *  <b>[Budget Dialog](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/BudgetUpdateDialog.vue)</b>
+  *  <b>[Budget Dialog](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/frontend/src/components/BudgetUpdateDialog.vue)</b>
  
       This dialog gives a provision to update the expense per category. Once the amount and category are updated, it auto-calculates the remaining amount along with the updation of the spent amount for that category. Additionally, it updates the overall budget also.
       ![image](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/assets/113642858/a52030bc-e472-4c7d-8fdd-2de03bf70874)
 
 
-  *  <b>[Negative Budget Handling](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/Statistics.vue)</b>
+  *  <b>[Negative Budget Handling](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/frontend/src/components/Statistics.vue)</b>
  
       If the user updates the amount for any category that is bigger than the overall budget then after the successful update it reflects negative amounts across that category and the overall budget statistics tile. It will render these amounts in red color to alert the user.
      
