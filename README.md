@@ -1,6 +1,6 @@
 # [Budget Management Application](https://budgetmanager-vue.onrender.com/)
 
-* ## Technologies/libraries used ##
+## Technologies/libraries used ##
 
 The front end is developed using 
   - [Vue.js](https://vuejs.org/guide/introduction.html#what-is-vue)
@@ -21,14 +21,14 @@ It will serve the required data for the front end. e.g categories.
 This Application is deployed using [Render](https://dashboard.render.com/) and can be accessed using this [URL](https://budgetmanager-vue.onrender.com/)
 
 
-* ## Project setup - How to download and run the project? ##
+## Project setup - How to download and run the project? ##
 
     * <b> STEP 1:</b> Dowload or clone the repository using command ``` git clone https://github.com/DiptiPrabhavale11/BudgetManager-Vue.git ```
     * <b> STEP 2:</b> Go to BudgetManager-Vue folder and run ``` npm install ``` .
     * <b> STEP 3:</b> To start the local backend server run the command ``` npm run server ```. It will serve mock data from db.json 
     * <b> STEP 4:</b> Execute ``` npm run serve ```. It will start the application at http://locahost:8080
  
-* ## Functionalities ##
+## Functionalities ##
   
   *  <b>[Home Page](https://github.com/DiptiPrabhavale11/BudgetManager-Vue/blob/main/src/components/Dashboard.vue)</b>
   
